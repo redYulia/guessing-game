@@ -1,3 +1,4 @@
+"use strict";
 const GuessingGame = require('../src/guessing-game.js')
 
 describe('GuessingGame', () => {
