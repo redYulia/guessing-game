@@ -1,8 +1,7 @@
 "use strict";
 
 class GuessingGame {
-    constructor(num) {
-        this.secretNum = num;
+    constructor() {
     }
 
     setRange(min, max) {
@@ -12,17 +11,13 @@ class GuessingGame {
     }
 
     guess() {
-        var num = this.averageNum;
-        if (num!=this.secretNum) {
-            num = (this.maxNum-this.minNum)/2 + this.minNum;
-            
-            if (!((num ^ 0) === num)) {
-                num++;
-                num = Math.floor(num);
-            }
+        var num = (this.maxNum-this.minNum)/2 + this.minNum;
+        if (!((num ^ 0) === num)) {
+            num++;
+            num = Math.floor(num);
         }
         this.averageNum = num;
-        console.log("guess = ",this.averageNum);
+        //console.log("guess = ",this.averageNum);
         return this.averageNum;
         
     }
